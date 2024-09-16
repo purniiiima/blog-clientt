@@ -26,7 +26,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5001/api/auth/register', userData);
+      const response = await axios.post('https://blog-server-as0s.onrender.com/api/auth/register', userData);
       localStorage.setItem('token', response.data.token);  // Save the token
       navigate('/');  // Redirect to the home page or another page
     } catch (error) {
