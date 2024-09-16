@@ -6,7 +6,7 @@ import 'react-quill/dist/quill.snow.css';
 const CreatePost = () => {
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('Uncategorized');
-  // const [description, setDescription] = useState('');
+  const [description, setDescription] = useState('');
   const [thumbnail, setThumbnail] = useState(null);
   const [name, setName] = useState('');
   const [role, setRole] = useState('');
@@ -52,7 +52,7 @@ const CreatePost = () => {
     const formData = new FormData();
     formData.append('title', title);
     formData.append('category', category);
-    // formData.append('description', description);
+    formData.append('description', description);
     formData.append('thumbnail', thumbnail);
     formData.append('name', name);
     formData.append('role', role);
