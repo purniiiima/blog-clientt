@@ -30,7 +30,7 @@ const CreatePost = () => {
   ];
 
   useEffect(() => {
-    axios.get('http://localhost:5001/api/test')
+    axios.get('https://blog-server-as0s.onrender.com/api/test')
       .then(response => {
         console.log(response.data); // Should log: { message: 'Frontend and backend are connected!' }
       })
@@ -58,7 +58,7 @@ const CreatePost = () => {
     formData.append('role', role);
     
     try {
-      const response = await axios.post('http://localhost:5001/api/blogs/create', formData, {
+      const response = await axios.post('https://blog-server-as0s.onrender.com/api/blogs/create', formData, {
         headers: {
           Authorization: `Bearer ${token}`, // Include token in the request headers
           'Content-Type': 'multipart/form-data'

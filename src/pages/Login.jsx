@@ -21,7 +21,7 @@ const Login = () => {
     e.preventDefault();
     try {
       // Make the login request
-      const response = await axios.post('http://localhost:5001/api/auth/login', userData);
+      const response = await axios.post('https://blog-server-as0s.onrender.com/api/auth/login', userData);
       
       // Save the received token to localStorage
       localStorage.setItem('token', response.data.token);  
