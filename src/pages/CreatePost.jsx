@@ -52,7 +52,7 @@ const CreatePost = () => {
     const formData = new FormData();
     formData.append('title', title);
     formData.append('category', category);
-    formData.append('description', description);
+    // formData.append('description', description);
     formData.append('thumbnail', thumbnail);
     formData.append('name', name);
     formData.append('role', role);
